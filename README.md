@@ -44,14 +44,14 @@ Proyek aplikasi web **Planto.** ini dikembangkan bersama oleh:
 
 <div align="center">
   <h3>✨ Hero Section — "Bernapas Alami"</h3>
-  <img <img width="1280" height="720" alt="Screenshot 2026-11-25 213618" src="https://github.com/user-attachments/assets/a62f0210-1fbe-46b6-893b-fc671c11c29a" <alt="Hero Section Planto" width="90%" />
+  <img src="https://github.com/user-attachments/assets/a62f0210-1fbe-46b6-893b-fc671c11c29a" alt="Hero Section Planto" width="90%" />
 </div>
 
 <br/>
 
 <div align="center">
   <h3>🌿 Koleksi Tanaman Penghasil O2 (Interactive Slider)</h3>
-  <img <img width="1280" height="720" alt="Screenshot 2026-11-25 215621" src="https://github.com/user-attachments/assets/7eed0942-bfd7-42a7-87f2-576d927c96dd" alt="Slider Koleksi O2" width="90%" />
+  <img src="https://github.com/user-attachments/assets/7eed0942-bfd7-42a7-87f2-576d927c96dd" alt="Slider Koleksi O2" width="90%" />
 </div>
 
 <br/>
@@ -60,23 +60,15 @@ Proyek aplikasi web **Planto.** ini dikembangkan bersama oleh:
 
 | Spotlight Tanaman Populer | Penawaran Sukulen Spesial |
 | :---: | :---: |
-| ![Tanaman Populer](<img width="854" height="480" alt="Screenshot 2026-11-25 214137" src="https://github.com/user-attachments/assets/8976e52e-644d-4ec1-83b7-bc62dbcf8ef3" />) 
-| ![Sukulen Spesial](<img width="854" height="480" alt="Screenshot 2026-11-25 215527" src="https://github.com/user-attachments/assets/7256b85a-d493-4e45-a474-104842b82f09" />) 
-|
+| <img src="https://github.com/user-attachments/assets/8976e52e-644d-4ec1-83b7-bc62dbcf8ef3" alt="Tanaman Populer" width="420" /> | <img src="https://github.com/user-attachments/assets/7256b85a-d493-4e45-a474-104842b82f09" alt="Sukulen Spesial" width="420" /> |
 
 | Filter Kategori Tanaman | Katalog Produk & Harga |
 | :---: | :---: |
-| ![Filter Kategori](<img width="854" height="480" alt="Screenshot 2026-11-25 214204" src="https://github.com/user-attachments/assets/9e877c59-92e6-491c-952b-59b068d9d8dd" />) 
-| ![Katalog Produk](<img width="854" height="480" alt="Screenshot 2026-11-25 215740" src="https://github.com/user-attachments/assets/d515743b-5110-4290-8377-dfad0bebff49" />) 
-|
+| <img src="https://github.com/user-attachments/assets/9e877c59-92e6-491c-952b-59b068d9d8dd" alt="Filter Kategori" width="420" /> | <img src="https://github.com/user-attachments/assets/d515743b-5110-4290-8377-dfad0bebff49" alt="Katalog Produk" width="420" /> |
 
 | Ulasan & Testimoni Pelanggan | Footer & Langganan Newsletter |
 | :---: | :---: |
-| ![Review Pelanggan](<img width="854" height="480" alt="Screenshot 2026-11-25 214224" src="https://github.com/user-attachments/assets/706cbcdb-91b9-4284-be02-5db86e0cd4c7" />) 
-| ![Footer Newsletter](<img width="854" height="480" alt="Screenshot 2026-11-25 215817" src="https://github.com/user-attachments/assets/0c00cde0-3f92-49bb-a57d-ed2a79399166" />) 
-|
-
----
+| <img src="https://github.com/user-attachments/assets/706cbcdb-91b9-4284-be02-5db86e0cd4c7" alt="Review Pelanggan" width="420" /> | <img src="https://github.com/user-attachments/assets/0c00cde0-3f92-49bb-a57d-ed2a79399166" alt="Footer Newsletter" width="420" /> |
 
 ## ✨ Fitur-Fitur Utama Aplikasi
 
