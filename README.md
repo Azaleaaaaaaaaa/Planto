@@ -44,7 +44,7 @@ Proyek aplikasi web **Planto.** ini dikembangkan bersama oleh:
 
 <div align="center">
   <h3>✨ Hero Section — "Bernapas Alami"</h3>
-  <img src=<img width="1280" height="720" alt="Screenshot 2026-11-25 213618" src="https://github.com/user-attachments/assets/a62f0210-1fbe-46b6-893b-fc671c11c29a" <alt="Hero Section Planto" width="90%" />
+  <img <img width="1280" height="720" alt="Screenshot 2026-11-25 213618" src="https://github.com/user-attachments/assets/a62f0210-1fbe-46b6-893b-fc671c11c29a" <alt="Hero Section Planto" width="90%" />
 </div>
 
 <br/>
