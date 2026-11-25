@@ -44,14 +44,14 @@ Proyek aplikasi web **Planto.** ini dikembangkan bersama oleh:
 
 <div align="center">
   <h3>✨ Hero Section — "Bernapas Alami"</h3>
-  <img src="screenshots/01-hero-section.jpg" alt="Hero Section Planto" width="100%" />
+  <img src="https://drive.google.com/file/d/1iMVuPk4o3Nq_SCwVyP05j9H1vPx7x6-U/view?usp=sharing" alt="Hero Section Planto" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
   <h3>🌿 Koleksi Tanaman Penghasil O2 (Interactive Slider)</h3>
-  <img src="screenshots/04-koleksi-o2-slider.jpg" alt="Slider Koleksi O2" width="100%" />
+  <img src="https://drive.google.com/file/d/1zuZ7A8_EXOnKbTEIGFEtfdd6LP_931tZ/view?usp=sharing" alt="Slider Koleksi O2" width="100%" />
 </div>
 
 <br/>
@@ -60,15 +60,15 @@ Proyek aplikasi web **Planto.** ini dikembangkan bersama oleh:
 
 | Spotlight Tanaman Populer | Penawaran Sukulen Spesial |
 | :---: | :---: |
-| ![Tanaman Populer](screenshots/02-tanaman-populer.jpg) | ![Sukulen Spesial](screenshots/03-produk-sukulen.jpg) |
+| ![Tanaman Populer](https://drive.google.com/file/d/1VDsiq3ZZnmSHDkXWXOOeVuRVuZbKBXpS/view?usp=sharing) | ![Sukulen Spesial](screenshots/03-produk-sukulen.jpg) |
 
 | Filter Kategori Tanaman | Katalog Produk & Harga |
 | :---: | :---: |
-| ![Filter Kategori](screenshots/05-kategori-tanaman.jpg) | ![Katalog Produk](screenshots/06-katalog-produk.jpg) |
+| ![Filter Kategori](https://drive.google.com/file/d/1mLmdQFj1tLmw9FxHid3PGhl9wTTJnvno/view?usp=sharing) | ![Katalog Produk](screenshots/06-katalog-produk.jpg) |
 
 | Ulasan & Testimoni Pelanggan | Footer & Langganan Newsletter |
 | :---: | :---: |
-| ![Review Pelanggan](screenshots/07-review-pelanggan.png) | ![Footer Newsletter](screenshots/08-footer-newsletter.png) |
+| ![Review Pelanggan](https://drive.google.com/file/d/1yeTa2ozBcGjeC70DOFshhxxSO40hHUKr/view?usp=sharing) | ![Footer Newsletter](screenshots/08-footer-newsletter.png) |
 
 ---
 
