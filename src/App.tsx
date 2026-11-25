@@ -2200,17 +2200,17 @@ export default function App() {
             {/* NAVBAR (data-node-id="22:23")                             */}
             {/* ========================================================= */}
             <header
-              className="relative z-30 flex items-center justify-between px-6 sm:px-10 lg:px-[67px] pt-8 lg:pt-[58px]"
+              className="relative z-30 flex items-center justify-between px-4 sm:px-10 lg:px-[67px] pt-5 sm:pt-8 lg:pt-[58px]"
               data-node-id="22:23"
             >
               {/* Brand Logo */}
               <a
                 href="#home"
-                className="flex items-center gap-[7px] group focus:outline-none"
+                className="flex items-center gap-1.5 sm:gap-[7px] group focus:outline-none shrink-0"
                 data-node-id="22:5"
               >
                 <div
-                  className="relative w-[48px] h-[48px] shrink-0 transition-transform duration-300 group-hover:scale-105"
+                  className="relative w-9 h-9 sm:w-[48px] sm:h-[48px] shrink-0 transition-transform duration-300 group-hover:scale-105"
                   data-node-id="17:174"
                 >
                   <img
@@ -2220,7 +2220,7 @@ export default function App() {
                   />
                 </div>
                 <span
-                  className="font-black text-[28px] text-white/75 group-hover:text-white transition-colors tracking-tight leading-none mt-2"
+                  className="font-black text-[22px] sm:text-[28px] text-white/75 group-hover:text-white transition-colors tracking-tight leading-none mt-1 sm:mt-2"
                   data-node-id="22:4"
                 >
                   Planto.
@@ -2303,7 +2303,7 @@ export default function App() {
 
               {/* Right Action Icons */}
               <div
-                className="flex items-center gap-5 sm:gap-8"
+                className="flex items-center gap-3.5 sm:gap-8"
                 data-node-id="22:22"
               >
                 {/* Search Button */}
@@ -2311,7 +2311,7 @@ export default function App() {
                   type="button"
                   onClick={() => setIsSearchOpen(!isSearchOpen)}
                   aria-label="Cari tanaman"
-                  className="relative w-[24px] h-[24px] opacity-75 hover:opacity-100 transition-opacity cursor-pointer"
+                  className="relative w-5 h-5 sm:w-[24px] sm:h-[24px] opacity-75 hover:opacity-100 transition-opacity cursor-pointer"
                   data-node-id="22:13"
                 >
                   <img
@@ -2326,7 +2326,7 @@ export default function App() {
                   type="button"
                   onClick={() => setIsCartOpen(true)}
                   aria-label="Buka keranjang belanja"
-                  className="relative w-[24px] h-[24px] opacity-85 hover:opacity-100 transition-opacity cursor-pointer"
+                  className="relative w-5 h-5 sm:w-[24px] sm:h-[24px] opacity-85 hover:opacity-100 transition-opacity cursor-pointer"
                   data-node-id="22:14"
                 >
                   <img
@@ -2335,7 +2335,7 @@ export default function App() {
                     className="w-full h-full object-contain"
                   />
                   {totalItems > 0 && (
-                    <span className="absolute -top-2.5 -right-3 bg-[#4ade80] text-[#171f12] font-bold text-xs min-w-[20px] h-[20px] px-1 rounded-full flex items-center justify-center shadow-md">
+                    <span className="absolute -top-2 -right-2.5 sm:-top-2.5 sm:-right-3 bg-[#4ade80] text-[#171f12] font-bold text-[10px] sm:text-xs min-w-[18px] h-[18px] sm:min-w-[20px] sm:h-[20px] px-1 rounded-full flex items-center justify-center shadow-md">
                       {totalItems}
                     </span>
                   )}
@@ -2343,24 +2343,24 @@ export default function App() {
 
                 {/* User Account / Login Button (Auto Role Recognition) */}
                 {currentUser ? (
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-1.5 sm:gap-2.5">
                     {currentUser.role === 'admin' ? (
                       <button
                         type="button"
                         onClick={() => setIsAdminPageOpen(true)}
-                        className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#4ade80] text-[#171f12] font-bold text-xs sm:text-sm shadow-lg hover:bg-white transition-all cursor-pointer"
+                        className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-[#4ade80] text-[#171f12] font-bold text-xs sm:text-sm shadow-lg hover:bg-white transition-all cursor-pointer"
                       >
-                        <LayoutDashboard className="w-4 h-4" />
+                        <LayoutDashboard className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                         <span>Kelola Toko</span>
                       </button>
                     ) : (
                       <button
                         type="button"
                         onClick={() => setIsCustomerOrdersOpen(true)}
-                        className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/25 text-white text-xs sm:text-sm font-medium transition-all cursor-pointer"
+                        className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/25 text-white text-xs sm:text-sm font-medium transition-all cursor-pointer"
                       >
-                        <User className="w-4 h-4 text-[#4ade80]" />
-                        <span className="max-w-[100px] truncate">
+                        <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#4ade80]" />
+                        <span className="max-w-[70px] sm:max-w-[100px] truncate">
                           {currentUser.name}
                         </span>
                       </button>
@@ -2369,9 +2369,9 @@ export default function App() {
                       type="button"
                       onClick={handleLogout}
                       title="Keluar Akun"
-                      className="p-2 rounded-xl bg-white/5 hover:bg-red-500/20 border border-white/15 text-white/70 hover:text-red-300 transition-colors cursor-pointer"
+                      className="p-1.5 sm:p-2 rounded-xl bg-white/5 hover:bg-red-500/20 border border-white/15 text-white/70 hover:text-red-300 transition-colors cursor-pointer"
                     >
-                      <LogOut className="w-4 h-4" />
+                      <LogOut className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </button>
                   </div>
                 ) : (
@@ -2382,9 +2382,9 @@ export default function App() {
                       setAuthError(null);
                       setIsAuthModalOpen(true);
                     }}
-                    className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white hover:text-[#171f12] border border-white/30 text-white text-sm font-semibold transition-all cursor-pointer"
+                    className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-white/10 hover:bg-white hover:text-[#171f12] border border-white/30 text-white text-xs sm:text-sm font-semibold transition-all cursor-pointer"
                   >
-                    <User className="w-4 h-4" />
+                    <User className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     <span>Masuk</span>
                   </button>
                 )}
@@ -2394,31 +2394,74 @@ export default function App() {
                   type="button"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   aria-label="Buka Menu"
-                  className="w-[24px] h-[15px] flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
+                  className="w-[22px] sm:w-[24px] h-[15px] flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
                   data-node-id="22:21"
                 >
                   <img
                     src={assets.menuHamburger}
                     alt="Menu"
-                    className="w-[28px] h-[15px] max-w-none"
+                    className="w-[24px] sm:w-[28px] h-[13px] sm:h-[15px] max-w-none"
                   />
                 </button>
               </div>
             </header>
 
-            {/* Expandable Search Bar & Quick Filter Drawer */}
+            {/* Expandable Search Bar & Quick Filter / Mobile Navigation Drawer */}
             {(isSearchOpen || isMobileMenuOpen) && (
-              <div className="relative z-30 mx-6 sm:mx-10 lg:mx-[67px] mt-6 p-5 rounded-3xl bg-[#1e2918]/90 backdrop-blur-xl border border-white/25 shadow-2xl">
-                <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+              <div className="relative z-30 mx-4 sm:mx-10 lg:mx-[67px] mt-4 sm:mt-6 p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#1e2918]/95 backdrop-blur-xl border border-white/25 shadow-2xl space-y-4">
+                {/* Mobile Navigation Links (only visible on < lg) */}
+                {isMobileMenuOpen && (
+                  <div className="lg:hidden grid grid-cols-2 gap-2 pb-3 border-b border-white/15">
+                    <a
+                      href="#home"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-white/15 text-sm font-semibold text-white text-center"
+                    >
+                      Beranda
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        scrollToSection('top-selling');
+                      }}
+                      className="px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-white/15 text-sm font-semibold text-white text-center cursor-pointer"
+                    >
+                      Tanaman Terlaris
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        scrollToSection('best-o2');
+                      }}
+                      className="px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-white/15 text-sm font-semibold text-white text-center cursor-pointer"
+                    >
+                      Tanaman O2
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        scrollToSection('footer');
+                      }}
+                      className="px-3.5 py-2.5 rounded-xl bg-white/5 hover:bg-white/15 text-sm font-semibold text-white text-center cursor-pointer"
+                    >
+                      Kontak
+                    </button>
+                  </div>
+                )}
+
+                <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4">
                   <div className="relative flex-1">
-                    <Search className="w-5 h-5 text-white/60 absolute left-4 top-1/2 -translate-y-1/2" />
+                    <Search className="w-4 h-4 sm:w-5 sm:h-5 text-white/60 absolute left-3.5 sm:left-4 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
                       value={searchQuery}
                       onChange={(e) => {
                         setSearchQuery(e.target.value);
                       }}
-                      className="w-full pl-12 pr-10 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:border-white/60"
+                      className="w-full pl-10 sm:pl-12 pr-9 py-2.5 sm:py-3 rounded-xl bg-white/10 border border-white/20 text-sm sm:text-base text-white focus:outline-none focus:border-white/60"
                     />
                     {searchQuery && (
                       <button
@@ -2431,16 +2474,20 @@ export default function App() {
                     )}
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                     {CATEGORIES.map((cat) => (
                       <button
                         key={cat}
                         type="button"
-                        onClick={() => handleSelectCategory(cat)}
-                        className={`px-4 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer ${selectedCategory === cat
-                          ? 'bg-white text-[#171f12] shadow'
-                          : 'bg-white/10 text-white/75 hover:bg-white/20'
-                          }`}
+                        onClick={() => {
+                          handleSelectCategory(cat);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-medium transition-all cursor-pointer ${
+                          selectedCategory === cat
+                            ? 'bg-white text-[#171f12] shadow'
+                            : 'bg-white/10 text-white/75 hover:bg-white/20'
+                        }`}
                       >
                         {cat}
                       </button>
@@ -2455,20 +2502,20 @@ export default function App() {
             {/* ========================================================= */}
             <section
               id="home"
-              className="relative z-20 px-6 sm:px-10 lg:px-[67px] pt-12 lg:pt-[155px]"
+              className="relative z-20 px-4 sm:px-10 lg:px-[67px] pt-8 sm:pt-12 lg:pt-[155px]"
             >
-              <div className="flex flex-col xl:flex-row items-start justify-between gap-12 xl:gap-8">
+              <div className="flex flex-col xl:flex-row items-start justify-between gap-10 sm:gap-12 xl:gap-8">
                 {/* Left Column: Bernapas Alami + Actions + Alina Patel Review Card */}
                 <div className="w-full xl:max-w-[890px]">
                   <h1
-                    className="font-semibold text-[54px] sm:text-[84px] lg:text-[108px] text-white/75 leading-[1.08] tracking-tight"
+                    className="font-semibold text-[40px] sm:text-[76px] lg:text-[108px] text-white/80 lg:text-white/75 leading-[1.08] tracking-tight"
                     data-node-id="22:37"
                   >
                     Bernapas Alami
                   </h1>
 
                   <p
-                    className="font-medium text-[18px] sm:text-[23px] text-white/75 max-w-[820px] mt-3 lg:mt-[12px] leading-normal lg:ml-[7px]"
+                    className="font-medium text-[15px] sm:text-[23px] text-white/75 max-w-[820px] mt-3 lg:mt-[12px] leading-relaxed sm:leading-normal lg:ml-[7px]"
                     data-node-id="22:38"
                   >
                     Tanaman hias dengan tampilan estetik dan menyegarkan di dalam
@@ -2476,11 +2523,11 @@ export default function App() {
                   </p>
 
                   {/* Explore & Live Demo Buttons */}
-                  <div className="flex flex-wrap items-center gap-6 sm:gap-[26px] mt-8 lg:mt-[25px] lg:ml-[7px]">
+                  <div className="flex flex-wrap items-center gap-4 sm:gap-[26px] mt-6 sm:mt-8 lg:mt-[25px] lg:ml-[7px]">
                     <button
                       type="button"
                       onClick={() => scrollToSection('top-selling')}
-                      className="h-[58px] w-[180px] rounded-[13px] border-2 border-white/75 text-[24px] text-white/75 hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
+                      className="h-[46px] sm:h-[58px] px-7 sm:px-0 sm:w-[180px] rounded-[13px] border-2 border-white/75 text-[18px] sm:text-[24px] text-white/80 sm:text-white/75 hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
                       data-node-id="22:39"
                     >
                       Jelajahi
@@ -2489,10 +2536,10 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => setIsLiveDemoOpen(true)}
-                      className="flex items-center gap-4 group cursor-pointer"
+                      className="flex items-center gap-3 sm:gap-4 group cursor-pointer"
                     >
                       <div
-                        className="w-[58px] h-[58px] relative transition-transform duration-300 group-hover:scale-105"
+                        className="w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] relative transition-transform duration-300 group-hover:scale-105"
                         data-node-id="22:45"
                       >
                         <img
@@ -2502,7 +2549,7 @@ export default function App() {
                         />
                       </div>
                       <span
-                        className="font-semibold text-[18px] text-white/75 group-hover:text-white transition-colors"
+                        className="font-semibold text-[15px] sm:text-[18px] text-white/75 group-hover:text-white transition-colors"
                         data-node-id="22:44"
                       >
                         Lihat Demo...
@@ -2510,31 +2557,31 @@ export default function App() {
                     </button>
                   </div>
 
-                  {/* Hero Glass Testimonial Card (Alina Patel) */}
+                  {/* Hero Glass Testimonial Card */}
                   <div
-                    className="mt-14 lg:mt-[217px] lg:ml-[7px] w-full max-w-[409px] min-h-[237px] rounded-[42px] backdrop-blur-[8.05px] bg-white/5 border-2 border-white/45 px-[34px] py-[42px] relative"
+                    className="mt-8 sm:mt-14 lg:mt-[217px] lg:ml-[7px] w-full max-w-[409px] sm:min-h-[237px] rounded-[28px] sm:rounded-[42px] backdrop-blur-[8.05px] bg-white/5 border-2 border-white/45 px-5 py-5 sm:px-[34px] sm:py-[42px] relative"
                     data-node-id="22:58"
                   >
-                    <div className="flex items-center gap-[18px]">
+                    <div className="flex items-center gap-3.5 sm:gap-[18px]">
                       <div
-                        className="w-[60px] h-[60px] rounded-[46px] overflow-hidden shrink-0 shadow-[0px_30px_36px_rgba(0,0,0,0.25)]"
+                        className="w-12 h-12 sm:w-[60px] sm:h-[60px] rounded-[46px] overflow-hidden shrink-0 shadow-[0px_30px_36px_rgba(0,0,0,0.25)]"
                         data-node-id="22:47"
                       >
                         <img
                           src={assets.avatarAlinaPatel}
-                          alt="Alina Patel"
+                          alt="Arip Soleh"
                           className="w-full h-full object-cover"
                         />
                       </div>
                       <div>
                         <p
-                          className="font-medium text-[24px] text-white leading-tight"
+                          className="font-medium text-[18px] sm:text-[24px] text-white leading-tight"
                           data-node-id="22:48"
                         >
                           Arip Soleh
                         </p>
                         <div
-                          className="w-[98px] h-[15px] mt-1.5"
+                          className="w-[82px] sm:w-[98px] h-[13px] sm:h-[15px] mt-1 sm:mt-1.5"
                           data-node-id="22:55"
                         >
                           <img
@@ -2546,7 +2593,7 @@ export default function App() {
                       </div>
                     </div>
                     <p
-                      className="font-normal text-[17px] text-white/75 mt-[25px] leading-snug max-w-[328px]"
+                      className="font-normal text-[14px] sm:text-[17px] text-white/75 mt-3.5 sm:mt-[25px] leading-snug max-w-[328px]"
                       data-node-id="22:56"
                     >
                       Terima kasih banyak cikkk..
@@ -2554,100 +2601,170 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Right Column: Featured Hero Plant Card (data-node-id="22:105") */}
+                {/* Right Column: Featured Hero Plant Card (Responsive Mobile Flow + Desktop Figma Frame) */}
                 <div
-                  className="relative w-full max-w-[512px] h-[754px] mx-auto xl:mx-0 shrink-0 xl:-mt-[62px]"
+                  className="relative w-full max-w-[512px] md:h-[754px] mx-auto xl:mx-0 shrink-0 xl:-mt-[62px]"
                   data-node-id="22:105"
                 >
-                  {/* SVG Notched Glass Card Background */}
-                  <div
-                    className="absolute left-0 top-[110px] w-full h-[644px] pointer-events-none"
-                    data-node-id="22:24"
-                  >
-                    <img
-                      src={assets.cardFrameSvg}
-                      alt=""
-                      className="w-full h-full block object-fill"
-                    />
-                  </div>
-
-                  {/* Floating Plant Image */}
-                  <div
-                    onClick={() => setSelectedProduct(currentHeroPlant)}
-                    className="absolute left-1/2 -translate-x-1/2 top-0 w-[360px] sm:w-[459px] h-[459px] cursor-pointer transition-transform duration-500 hover:scale-105"
-                    data-node-id="17:167"
-                  >
-                    <img
-                      src={currentHeroPlant.image}
-                      alt={currentHeroPlant.name}
-                      className="w-full h-full object-contain plant-drop-shadow"
-                    />
-                  </div>
-
-                  {/* Card Content */}
-                  <div className="absolute left-[45px] sm:left-[75px] right-[32px] top-[486px]">
-                    <p
-                      className="font-normal text-[23px] text-white leading-normal"
-                      data-node-id="22:27"
+                  {/* MOBILE CARD (< md): Clean Flexible Glassmorphism Card */}
+                  <div className="md:hidden relative rounded-[32px] backdrop-blur-xl bg-white/5 border-2 border-white/35 p-5 pt-3 flex flex-col items-center text-center shadow-2xl">
+                    <div
+                      onClick={() => setSelectedProduct(currentHeroPlant)}
+                      className="w-[220px] h-[220px] -mt-12 mb-2 cursor-pointer"
                     >
+                      <img
+                        src={currentHeroPlant.image}
+                        alt={currentHeroPlant.name}
+                        className="w-full h-full object-contain plant-drop-shadow"
+                      />
+                    </div>
+                    <p className="text-sm text-white/80 font-normal">
                       {currentHeroPlant.subtitle}
                     </p>
-
-                    <div className="flex items-center justify-between mt-[18px]">
+                    <div className="flex items-center justify-center gap-3 mt-1 w-full">
                       <h2
                         onClick={() => setSelectedProduct(currentHeroPlant)}
-                        className="font-normal text-[32px] sm:text-[38px] text-white/75 hover:text-white transition-colors cursor-pointer leading-normal"
-                        data-node-id="22:28"
+                        className="text-2xl font-semibold text-white cursor-pointer"
                       >
                         {currentHeroPlant.name}
                       </h2>
-
-                      {/* Next Slide Arrow */}
                       <button
                         type="button"
                         onClick={() =>
                           setHeroIndex((prev) => (prev + 1) % heroSlides.length)
                         }
                         aria-label="Tanaman berikutnya"
-                        className="w-[28px] h-[28px] flex items-center justify-center rounded-full hover:bg-white/10 transition-colors cursor-pointer mr-1"
-                        data-node-id="22:36"
+                        className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center cursor-pointer"
                       >
                         <img
                           src={assets.rightArrow}
                           alt="Berikutnya"
-                          className="w-[18px] h-[18px] opacity-75"
+                          className="w-3.5 h-3.5 opacity-80"
                         />
                       </button>
                     </div>
-
-                    {/* Beli Sekarang Button */}
+                    <p className="text-base font-bold text-[#4ade80] mt-1">
+                      {currentHeroPlant.priceFormatted}
+                    </p>
                     <button
                       type="button"
                       onClick={() => addToCart(currentHeroPlant, true)}
-                      className="mt-[35px] px-6 min-w-[180px] h-[58px] rounded-[13px] border-2 border-white/75 text-[22px] text-white/75 hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
-                      data-node-id="22:31"
+                      className="mt-4 w-full max-w-[200px] h-[46px] rounded-[13px] border-2 border-white/75 text-base font-semibold text-white hover:bg-white hover:text-[#171f12] transition-all cursor-pointer"
                     >
                       Beli Sekarang
                     </button>
+                    <div className="flex items-center justify-center gap-2 mt-5">
+                      {heroSlides.map((slide, idx) => (
+                        <button
+                          key={slide.id}
+                          type="button"
+                          onClick={() => setHeroIndex(idx)}
+                          aria-label={`Slide ${idx + 1}`}
+                          className={`h-[6px] rounded-full transition-all cursor-pointer ${
+                            heroIndex === idx
+                              ? 'w-[21px] bg-white'
+                              : 'w-[6px] bg-white/50'
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Pagination Indicator Dots */}
-                  <div
-                    className="absolute bottom-[50px] left-1/2 -translate-x-1/2 flex items-center gap-2.5"
-                    data-node-id="22:35"
-                  >
-                    {heroSlides.map((slide, idx) => (
-                      <button
-                        key={slide.id}
-                        type="button"
-                        onClick={() => setHeroIndex(idx)}
-                        aria-label={`Slide ${idx + 1}`}
-                        className={`h-[6px] rounded-full transition-all cursor-pointer ${heroIndex === idx
-                          ? 'w-[21px] bg-white'
-                          : 'w-[6px] bg-white/50 hover:bg-white/80'
-                          }`}
+                  {/* DESKTOP CARD (>= md): Exact Original Figma Layout */}
+                  <div className="hidden md:block relative w-full h-full">
+                    {/* SVG Notched Glass Card Background */}
+                    <div
+                      className="absolute left-0 top-[110px] w-full h-[644px] pointer-events-none"
+                      data-node-id="22:24"
+                    >
+                      <img
+                        src={assets.cardFrameSvg}
+                        alt=""
+                        className="w-full h-full block object-fill"
                       />
-                    ))}
+                    </div>
+
+                    {/* Floating Plant Image */}
+                    <div
+                      onClick={() => setSelectedProduct(currentHeroPlant)}
+                      className="absolute left-1/2 -translate-x-1/2 top-0 w-[459px] h-[459px] cursor-pointer transition-transform duration-500 hover:scale-105"
+                      data-node-id="17:167"
+                    >
+                      <img
+                        src={currentHeroPlant.image}
+                        alt={currentHeroPlant.name}
+                        className="w-full h-full object-contain plant-drop-shadow"
+                      />
+                    </div>
+
+                    {/* Card Content */}
+                    <div className="absolute left-[75px] right-[32px] top-[486px]">
+                      <p
+                        className="font-normal text-[23px] text-white leading-normal"
+                        data-node-id="22:27"
+                      >
+                        {currentHeroPlant.subtitle}
+                      </p>
+
+                      <div className="flex items-center justify-between mt-[18px]">
+                        <h2
+                          onClick={() => setSelectedProduct(currentHeroPlant)}
+                          className="font-normal text-[38px] text-white/75 hover:text-white transition-colors cursor-pointer leading-normal"
+                          data-node-id="22:28"
+                        >
+                          {currentHeroPlant.name}
+                        </h2>
+
+                        {/* Next Slide Arrow */}
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setHeroIndex(
+                              (prev) => (prev + 1) % heroSlides.length
+                            )
+                          }
+                          aria-label="Tanaman berikutnya"
+                          className="w-[28px] h-[28px] flex items-center justify-center rounded-full hover:bg-white/10 transition-colors cursor-pointer mr-1"
+                          data-node-id="22:36"
+                        >
+                          <img
+                            src={assets.rightArrow}
+                            alt="Berikutnya"
+                            className="w-[18px] h-[18px] opacity-75"
+                          />
+                        </button>
+                      </div>
+
+                      {/* Beli Sekarang Button */}
+                      <button
+                        type="button"
+                        onClick={() => addToCart(currentHeroPlant, true)}
+                        className="mt-[35px] px-6 min-w-[180px] h-[58px] rounded-[13px] border-2 border-white/75 text-[22px] text-white/75 hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
+                        data-node-id="22:31"
+                      >
+                        Beli Sekarang
+                      </button>
+                    </div>
+
+                    {/* Pagination Indicator Dots */}
+                    <div
+                      className="absolute bottom-[50px] left-1/2 -translate-x-1/2 flex items-center gap-2.5"
+                      data-node-id="22:35"
+                    >
+                      {heroSlides.map((slide, idx) => (
+                        <button
+                          key={slide.id}
+                          type="button"
+                          onClick={() => setHeroIndex(idx)}
+                          aria-label={`Slide ${idx + 1}`}
+                          className={`h-[6px] rounded-full transition-all cursor-pointer ${
+                            heroIndex === idx
+                              ? 'w-[21px] bg-white'
+                              : 'w-[6px] bg-white/50 hover:bg-white/80'
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2656,21 +2773,21 @@ export default function App() {
             {/* ========================================================= */}
             {/* OUR TRENDY PLANTS SECTION                                 */}
             {/* ========================================================= */}
-            <section className="relative z-20 px-6 sm:px-10 lg:px-[74px] pt-24 lg:pt-[100px] pb-16">
+            <section className="relative z-20 px-4 sm:px-10 lg:px-[74px] pt-16 sm:pt-24 lg:pt-[100px] pb-10 sm:pb-16">
               {/* Section Heading with Corner Brackets */}
-              <div className="flex justify-center mb-16 lg:mb-[150px]">
+              <div className="flex justify-center mb-10 sm:mb-16 lg:mb-[150px]">
                 <div
-                  className="relative inline-flex items-center justify-center px-8 py-2"
+                  className="relative inline-flex items-center justify-center px-6 sm:px-8 py-2"
                   data-node-id="22:64"
                 >
                   {/* Bottom-Left Green Corner Bracket */}
                   <img
                     src={assets.sectionBracketLeft}
                     alt=""
-                    className="absolute -left-2 -bottom-2 w-[55px] h-[55px] pointer-events-none select-none"
+                    className="absolute -left-1 sm:-left-2 -bottom-1 sm:-bottom-2 w-8 h-8 sm:w-[55px] sm:h-[55px] pointer-events-none select-none"
                   />
                   <h2
-                    className="font-semibold text-[36px] sm:text-[48px] lg:text-[55px] text-white heading-shadow text-center leading-normal"
+                    className="font-semibold text-[26px] sm:text-[48px] lg:text-[55px] text-white heading-shadow text-center leading-normal"
                     data-node-id="22:61"
                   >
                     Tanaman Populer Kami
@@ -2679,17 +2796,17 @@ export default function App() {
                   <img
                     src={assets.sectionBracketRight}
                     alt=""
-                    className="absolute -right-2 -top-2 w-[55px] h-[55px] rotate-180 pointer-events-none select-none"
+                    className="absolute -right-1 sm:-right-2 -top-1 sm:-top-2 w-8 h-8 sm:w-[55px] sm:h-[55px] rotate-180 pointer-events-none select-none"
                   />
                 </div>
               </div>
 
               {/* Trendy Banner 1 (Plant on Left, Content on Right) */}
-              <div className="relative w-full min-h-[526px] rounded-[48px] lg:rounded-[151px] backdrop-blur-[11.15px] bg-white/5 border-[3px] border-white/45 px-8 sm:px-14 lg:px-20 py-12 lg:py-0 flex flex-col lg:flex-row items-center justify-between gap-8 mb-24 lg:mb-[138px]">
+              <div className="relative w-full lg:min-h-[526px] rounded-[32px] sm:rounded-[48px] lg:rounded-[151px] backdrop-blur-[11.15px] bg-white/5 border-2 lg:border-[3px] border-white/45 px-5 sm:px-14 lg:px-20 py-8 sm:py-12 lg:py-0 flex flex-col lg:flex-row items-center justify-between gap-5 sm:gap-8 mb-12 sm:mb-24 lg:mb-[138px]">
                 {/* Left Overlapping Plant Image */}
                 <div
                   onClick={() => setSelectedProduct(trendyPlant1)}
-                  className="relative lg:-mt-[206px] lg:-mb-[20px] w-[320px] sm:w-[460px] xl:w-[601px] xl:h-[732px] shrink-0 flex items-center justify-center cursor-pointer transition-transform duration-500 hover:scale-105"
+                  className="relative lg:-mt-[206px] lg:-mb-[20px] w-[200px] h-[200px] sm:w-[380px] sm:h-[380px] xl:w-[601px] xl:h-[732px] shrink-0 flex items-center justify-center cursor-pointer transition-transform duration-500 hover:scale-105"
                   data-node-id="22:66"
                 >
                   <img
@@ -2701,37 +2818,37 @@ export default function App() {
 
                 {/* Right Text Details */}
                 <div
-                  className="w-full lg:max-w-[680px] xl:mr-12"
+                  className="w-full lg:max-w-[680px] xl:mr-12 text-center lg:text-left"
                   data-node-id="22:75"
                 >
                   <h3
                     onClick={() => setSelectedProduct(trendyPlant1)}
-                    className="font-semibold text-[28px] sm:text-[38px] text-white leading-normal cursor-pointer hover:text-[#4ade80] transition-colors"
+                    className="font-semibold text-[22px] sm:text-[38px] text-white leading-normal cursor-pointer hover:text-[#4ade80] transition-colors"
                     data-node-id="22:67"
                   >
                     {trendyPlant1.name}
                   </h3>
                   <p
-                    className="font-semibold text-[18px] sm:text-[20px] text-white mt-4 lg:mt-[24px] max-w-[616px] leading-normal"
+                    className="font-medium sm:font-semibold text-[14px] sm:text-[20px] text-white/85 sm:text-white mt-2 sm:mt-4 lg:mt-[24px] max-w-[616px] mx-auto lg:mx-0 leading-relaxed sm:leading-normal"
                     data-node-id="22:68"
                   >
                     {trendyPlant1.description}
                   </p>
                   <p
-                    className="font-semibold text-[32px] sm:text-[38px] text-white price-shadow mt-5 lg:mt-[24px] leading-normal"
+                    className="font-semibold text-[24px] sm:text-[38px] text-white price-shadow mt-3 sm:mt-5 lg:mt-[24px] leading-normal"
                     data-node-id="22:69"
                   >
                     {trendyPlant1.priceFormatted}
                   </p>
 
                   <div
-                    className="flex items-center gap-[23px] mt-6 lg:mt-[24px]"
+                    className="flex items-center justify-center lg:justify-start gap-3 sm:gap-[23px] mt-5 sm:mt-6 lg:mt-[24px]"
                     data-node-id="22:70"
                   >
                     <button
                       type="button"
                       onClick={() => addToCart(trendyPlant1, true)}
-                      className="px-6 min-w-[180px] h-[58px] rounded-[13px] border-2 border-white text-[22px] text-white hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
+                      className="px-5 sm:px-6 min-w-[140px] sm:min-w-[180px] h-[46px] sm:h-[58px] rounded-[13px] border-2 border-white text-[16px] sm:text-[22px] text-white hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
                       data-node-id="22:71"
                     >
                       Beli Sekarang
@@ -2740,13 +2857,13 @@ export default function App() {
                       type="button"
                       onClick={() => addToCart(trendyPlant1, false)}
                       aria-label="Tambah ke keranjang"
-                      className="w-[58px] h-[58px] rounded-[13px] border-2 border-white flex items-center justify-center hover:bg-white/20 transition-all cursor-pointer"
+                      className="w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] rounded-[13px] border-2 border-white flex items-center justify-center hover:bg-white/20 transition-all cursor-pointer"
                       data-node-id="22:73"
                     >
                       <img
                         src={assets.bagIcon}
                         alt="Tambah ke keranjang"
-                        className="w-[28px] h-[28px] object-contain"
+                        className="w-5 h-5 sm:w-[28px] sm:h-[28px] object-contain"
                       />
                     </button>
                   </div>
@@ -2754,37 +2871,40 @@ export default function App() {
               </div>
 
               {/* Trendy Banner 2 (Content on Left, Plant on Right) */}
-              <div className="relative w-full min-h-[526px] rounded-[48px] lg:rounded-[151px] backdrop-blur-[11.15px] bg-white/5 border-[3px] border-white/45 px-8 sm:px-14 lg:px-[147px] py-12 lg:py-0 flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
+              <div className="relative w-full lg:min-h-[526px] rounded-[32px] sm:rounded-[48px] lg:rounded-[151px] backdrop-blur-[11.15px] bg-white/5 border-2 lg:border-[3px] border-white/45 px-5 sm:px-14 lg:px-[147px] py-8 sm:py-12 lg:py-0 flex flex-col-reverse lg:flex-row items-center justify-between gap-5 sm:gap-8">
                 {/* Left Text Details */}
-                <div className="w-full lg:max-w-[621px]" data-node-id="22:78">
+                <div
+                  className="w-full lg:max-w-[621px] text-center lg:text-left"
+                  data-node-id="22:78"
+                >
                   <h3
                     onClick={() => setSelectedProduct(trendyPlant2)}
-                    className="font-semibold text-[28px] sm:text-[38px] text-white leading-normal cursor-pointer hover:text-[#4ade80] transition-colors"
+                    className="font-semibold text-[22px] sm:text-[38px] text-white leading-normal cursor-pointer hover:text-[#4ade80] transition-colors"
                     data-node-id="22:80"
                   >
                     {trendyPlant2.name}
                   </h3>
                   <p
-                    className="font-semibold text-[18px] sm:text-[20px] text-white mt-4 lg:mt-[24px] max-w-[616px] leading-normal"
+                    className="font-medium sm:font-semibold text-[14px] sm:text-[20px] text-white/85 sm:text-white mt-2 sm:mt-4 lg:mt-[24px] max-w-[616px] mx-auto lg:mx-0 leading-relaxed sm:leading-normal"
                     data-node-id="22:81"
                   >
                     {trendyPlant2.description}
                   </p>
                   <p
-                    className="font-semibold text-[32px] sm:text-[38px] text-white price-shadow mt-5 lg:mt-[24px] leading-normal"
+                    className="font-semibold text-[24px] sm:text-[38px] text-white price-shadow mt-3 sm:mt-5 lg:mt-[24px] leading-normal"
                     data-node-id="22:79"
                   >
                     {trendyPlant2.priceFormatted}
                   </p>
 
                   <div
-                    className="flex items-center gap-[23px] mt-6 lg:mt-[24px]"
+                    className="flex items-center justify-center lg:justify-start gap-3 sm:gap-[23px] mt-5 sm:mt-6 lg:mt-[24px]"
                     data-node-id="22:82"
                   >
                     <button
                       type="button"
                       onClick={() => addToCart(trendyPlant2, true)}
-                      className="px-6 min-w-[180px] h-[58px] rounded-[13px] border-2 border-white text-[22px] text-white hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
+                      className="px-5 sm:px-6 min-w-[140px] sm:min-w-[180px] h-[46px] sm:h-[58px] rounded-[13px] border-2 border-white text-[16px] sm:text-[22px] text-white hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
                       data-node-id="22:83"
                     >
                       Beli Sekarang
@@ -2793,13 +2913,13 @@ export default function App() {
                       type="button"
                       onClick={() => addToCart(trendyPlant2, false)}
                       aria-label="Tambah ke keranjang"
-                      className="w-[58px] h-[58px] rounded-[13px] border-2 border-white flex items-center justify-center hover:bg-white/20 transition-all cursor-pointer"
+                      className="w-[46px] h-[46px] sm:w-[58px] sm:h-[58px] rounded-[13px] border-2 border-white flex items-center justify-center hover:bg-white/20 transition-all cursor-pointer"
                       data-node-id="22:84"
                     >
                       <img
                         src={assets.bagIcon}
                         alt="Tambah ke keranjang"
-                        className="w-[28px] h-[28px] object-contain"
+                        className="w-5 h-5 sm:w-[28px] sm:h-[28px] object-contain"
                       />
                     </button>
                   </div>
@@ -2808,7 +2928,7 @@ export default function App() {
                 {/* Right Overlapping Plant Image */}
                 <div
                   onClick={() => setSelectedProduct(trendyPlant2)}
-                  className="relative lg:-mt-[149px] lg:-mb-[50px] w-[320px] sm:w-[460px] xl:w-[601px] xl:h-[732px] shrink-0 flex items-center justify-center cursor-pointer transition-transform duration-500 hover:scale-105"
+                  className="relative lg:-mt-[149px] lg:-mb-[50px] w-[200px] h-[200px] sm:w-[380px] sm:h-[380px] xl:w-[601px] xl:h-[732px] shrink-0 flex items-center justify-center cursor-pointer transition-transform duration-500 hover:scale-105"
                   data-node-id="22:77"
                 >
                   <img
@@ -2822,25 +2942,25 @@ export default function App() {
           </div>
 
           {/* ========================================================= */}
-          {/* OUR TOP SELLING SECTION (6 Cards Grid)                    */}
+          {/* OUR TOP SELLING SECTION (2-Col Mobile / 3-Col Desktop)    */}
           {/* ========================================================= */}
           <section
             id="top-selling"
-            className="relative z-20 px-6 sm:px-10 lg:px-[77px] pt-24 lg:pt-[150px]"
+            className="relative z-20 px-4 sm:px-10 lg:px-[77px] pt-14 sm:pt-24 lg:pt-[150px]"
           >
             {/* Section Heading with Corner Brackets */}
-            <div className="flex flex-col items-center justify-center mb-10">
+            <div className="flex flex-col items-center justify-center mb-6 sm:mb-10">
               <div
-                className="relative inline-flex items-center justify-center px-9 py-2"
+                className="relative inline-flex items-center justify-center px-6 sm:px-9 py-2"
                 data-node-id="22:91"
               >
                 <img
                   src={assets.sectionBracketLeft}
                   alt=""
-                  className="absolute -left-2 -bottom-2 w-[68.5px] h-[69px] pointer-events-none select-none"
+                  className="absolute -left-1 sm:-left-2 -bottom-1 sm:-bottom-2 w-8 h-8 sm:w-[68.5px] sm:h-[69px] pointer-events-none select-none"
                 />
                 <h2
-                  className="font-semibold text-[36px] sm:text-[48px] lg:text-[55px] text-white heading-shadow text-center leading-normal"
+                  className="font-semibold text-[26px] sm:text-[48px] lg:text-[55px] text-white heading-shadow text-center leading-normal"
                   data-node-id="22:92"
                 >
                   Tanaman Terlaris Kami
@@ -2848,21 +2968,22 @@ export default function App() {
                 <img
                   src={assets.sectionBracketRight}
                   alt=""
-                  className="absolute -right-2 -top-2 w-[68.5px] h-[69px] rotate-180 pointer-events-none select-none"
+                  className="absolute -right-1 sm:-right-2 -top-1 sm:-top-2 w-8 h-8 sm:w-[68.5px] sm:h-[69px] rotate-180 pointer-events-none select-none"
                 />
               </div>
 
               {/* Category Filter Pills */}
-              <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-5 sm:mt-8">
                 {CATEGORIES.map((cat) => (
                   <button
                     key={cat}
                     type="button"
                     onClick={() => setSelectedCategory(cat)}
-                    className={`px-5 py-2 rounded-full text-sm sm:text-base font-medium border transition-all cursor-pointer ${selectedCategory === cat
-                      ? 'bg-white text-[#171f12] border-white shadow-lg'
-                      : 'bg-white/5 text-white/75 border-white/25 hover:border-white/60 hover:text-white'
-                      }`}
+                    className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-base font-medium border transition-all cursor-pointer ${
+                      selectedCategory === cat
+                        ? 'bg-white text-[#171f12] border-white shadow-lg'
+                        : 'bg-white/5 text-white/75 border-white/25 hover:border-white/60 hover:text-white'
+                    }`}
                   >
                     {cat === 'Semua' ? 'Semua Tanaman' : cat}
                   </button>
@@ -2872,8 +2993,8 @@ export default function App() {
 
             {/* Empty Filter State */}
             {topSellingProducts.length === 0 ? (
-              <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/20 my-8">
-                <p className="text-2xl text-white/75">
+              <div className="text-center py-14 sm:py-20 bg-white/5 rounded-3xl border border-white/20 my-8 px-4">
+                <p className="text-lg sm:text-2xl text-white/75">
                   Tidak ada tanaman yang cocok dengan "
                   {searchQuery || selectedCategory}".
                 </p>
@@ -2889,49 +3010,40 @@ export default function App() {
                 </button>
               </div>
             ) : (
-              /* 3-Column Product Grid Matching Figma Coordinates */
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-[19px] gap-y-[22px] justify-items-center mt-8">
-                {topSellingProducts.map((plant) => (
-                  <div
-                    key={plant.id}
-                    className="relative w-full max-w-[512px] h-[781px] group"
-                  >
-                    {/* Notched Glass Card Frame SVG (starts at top-[137px], h-[644px]) */}
-                    <div className="absolute left-0 top-[137px] w-full h-[644px] pointer-events-none">
-                      <img
-                        src={assets.cardFrameSvg}
-                        alt=""
-                        className="w-full h-full block object-fill"
-                      />
-                    </div>
-
-                    {/* Plant Image Overlapping Top */}
+              <>
+                {/* MOBILE 2-COLUMN COMPACT E-COMMERCE GRID (< md) */}
+                <div className="grid grid-cols-2 gap-3.5 sm:gap-5 mt-6 md:hidden">
+                  {topSellingProducts.map((plant) => (
                     <div
-                      onClick={() => setSelectedProduct(plant)}
-                      className="absolute left-[49px] top-0 w-[377px] h-[459px] cursor-pointer transition-transform duration-500 group-hover:scale-105 flex items-center justify-center"
+                      key={plant.id}
+                      className="rounded-[24px] backdrop-blur-md bg-white/5 border border-white/25 p-3.5 flex flex-col justify-between shadow-xl"
                     >
-                      <img
-                        src={plant.image}
-                        alt={plant.name}
-                        className="w-full h-full object-contain plant-drop-shadow"
-                      />
-                    </div>
+                      <div>
+                        <div
+                          onClick={() => setSelectedProduct(plant)}
+                          className="w-full aspect-square flex items-center justify-center cursor-pointer p-1"
+                        >
+                          <img
+                            src={plant.image}
+                            alt={plant.name}
+                            className="w-full h-full object-contain plant-drop-shadow"
+                          />
+                        </div>
 
-                    {/* Card Text & Price Content */}
-                    <div className="absolute left-[72px] right-[71px] top-[494px]">
-                      <h3
-                        onClick={() => setSelectedProduct(plant)}
-                        className="font-normal text-[30px] sm:text-[34px] text-white/75 hover:text-white transition-colors cursor-pointer leading-normal"
-                      >
-                        {plant.name}
-                      </h3>
+                        <h3
+                          onClick={() => setSelectedProduct(plant)}
+                          className="font-semibold text-[15px] text-white mt-2 leading-snug line-clamp-1 cursor-pointer"
+                        >
+                          {plant.name}
+                        </h3>
 
-                      <p className="font-normal text-[19px] sm:text-[22px] text-white/75 mt-[20px] max-w-[330px] leading-normal">
-                        {plant.description}
-                      </p>
+                        <p className="text-[11px] text-white/70 mt-1 line-clamp-2 leading-relaxed">
+                          {plant.description}
+                        </p>
+                      </div>
 
-                      <div className="flex items-center justify-between mt-[30px]">
-                        <span className="font-normal text-[30px] sm:text-[36px] text-white/75 leading-normal">
+                      <div className="flex items-center justify-between gap-1.5 mt-3 pt-2 border-t border-white/10">
+                        <span className="font-bold text-[13px] text-[#4ade80] leading-none">
                           {plant.priceFormatted}
                         </span>
 
@@ -2939,39 +3051,103 @@ export default function App() {
                           type="button"
                           onClick={() => addToCart(plant, false)}
                           aria-label={`Tambah ${plant.name} ke keranjang`}
-                          className="w-[57px] h-[57px] rounded-[15px] border-2 border-white/75 flex items-center justify-center hover:bg-white/20 active:scale-95 transition-all cursor-pointer"
+                          className="w-9 h-9 rounded-xl border border-white/60 flex items-center justify-center hover:bg-white/20 active:scale-95 transition-all cursor-pointer shrink-0"
                         >
                           <img
                             src={assets.bagIcon}
                             alt="Tambah ke keranjang"
-                            className="w-[30px] h-[30px] object-contain opacity-75"
+                            className="w-4 h-4 object-contain opacity-90"
                           />
                         </button>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+
+                {/* DESKTOP / TABLET GRID (>= md): Exact Original Figma Layout */}
+                <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-x-[19px] gap-y-[22px] justify-items-center mt-8">
+                  {topSellingProducts.map((plant) => (
+                    <div
+                      key={plant.id}
+                      className="relative w-full max-w-[512px] h-[781px] group"
+                    >
+                      {/* Notched Glass Card Frame SVG (starts at top-[137px], h-[644px]) */}
+                      <div className="absolute left-0 top-[137px] w-full h-[644px] pointer-events-none">
+                        <img
+                          src={assets.cardFrameSvg}
+                          alt=""
+                          className="w-full h-full block object-fill"
+                        />
+                      </div>
+
+                      {/* Plant Image Overlapping Top */}
+                      <div
+                        onClick={() => setSelectedProduct(plant)}
+                        className="absolute left-[49px] top-0 w-[377px] h-[459px] cursor-pointer transition-transform duration-500 group-hover:scale-105 flex items-center justify-center"
+                      >
+                        <img
+                          src={plant.image}
+                          alt={plant.name}
+                          className="w-full h-full object-contain plant-drop-shadow"
+                        />
+                      </div>
+
+                      {/* Card Text & Price Content */}
+                      <div className="absolute left-[72px] right-[71px] top-[494px]">
+                        <h3
+                          onClick={() => setSelectedProduct(plant)}
+                          className="font-normal text-[30px] sm:text-[34px] text-white/75 hover:text-white transition-colors cursor-pointer leading-normal"
+                        >
+                          {plant.name}
+                        </h3>
+
+                        <p className="font-normal text-[19px] sm:text-[22px] text-white/75 mt-[20px] max-w-[330px] leading-normal">
+                          {plant.description}
+                        </p>
+
+                        <div className="flex items-center justify-between mt-[30px]">
+                          <span className="font-normal text-[30px] sm:text-[36px] text-white/75 leading-normal">
+                            {plant.priceFormatted}
+                          </span>
+
+                          <button
+                            type="button"
+                            onClick={() => addToCart(plant, false)}
+                            aria-label={`Tambah ${plant.name} ke keranjang`}
+                            className="w-[57px] h-[57px] rounded-[15px] border-2 border-white/75 flex items-center justify-center hover:bg-white/20 active:scale-95 transition-all cursor-pointer"
+                          >
+                            <img
+                              src={assets.bagIcon}
+                              alt="Tambah ke keranjang"
+                              className="w-[30px] h-[30px] object-contain opacity-75"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
             )}
           </section>
 
           {/* ========================================================= */}
           {/* CUSTOMER REVIEW SECTION (data-node-id="22:185")           */}
           {/* ========================================================= */}
-          <section className="relative z-20 px-6 sm:px-10 lg:px-[77px] pt-28 lg:pt-[214px]">
+          <section className="relative z-20 px-4 sm:px-10 lg:px-[77px] pt-20 sm:pt-28 lg:pt-[214px]">
             {/* Heading */}
-            <div className="flex justify-center mb-16 lg:mb-[183px]">
+            <div className="flex justify-center mb-10 sm:mb-16 lg:mb-[183px]">
               <div
-                className="relative inline-flex items-center justify-center px-9 py-2"
+                className="relative inline-flex items-center justify-center px-6 sm:px-9 py-2"
                 data-node-id="22:147"
               >
                 <img
                   src={assets.sectionBracketLeft}
                   alt=""
-                  className="absolute -left-2 -bottom-2 w-[68.5px] h-[69px] pointer-events-none select-none"
+                  className="absolute -left-1 sm:-left-2 -bottom-1 sm:-bottom-2 w-8 h-8 sm:w-[68.5px] sm:h-[69px] pointer-events-none select-none"
                 />
                 <h2
-                  className="font-semibold text-[36px] sm:text-[48px] lg:text-[55px] text-white heading-shadow text-center leading-normal"
+                  className="font-semibold text-[26px] sm:text-[48px] lg:text-[55px] text-white heading-shadow text-center leading-normal"
                   data-node-id="22:148"
                 >
                   Ulasan Pelanggan
@@ -2979,20 +3155,20 @@ export default function App() {
                 <img
                   src={assets.sectionBracketRight}
                   alt=""
-                  className="absolute -right-2 -top-2 w-[68.5px] h-[69px] rotate-180 pointer-events-none select-none"
+                  className="absolute -right-1 sm:-right-2 -top-1 sm:-top-2 w-8 h-8 sm:w-[68.5px] sm:h-[69px] rotate-180 pointer-events-none select-none"
                 />
               </div>
             </div>
 
-            {/* 3 Review Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[21px] justify-items-center">
+            {/* 3 Review Cards Grid (Clean Glass Card on Mobile, SVG Frame on Desktop) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-[21px] justify-items-center">
               {customerReviews.map((review) => (
                 <div
                   key={review.id}
-                  className="relative w-full max-w-[512px] h-[414px]"
+                  className="relative w-full max-w-[512px] md:h-[414px] rounded-[28px] md:rounded-none bg-white/5 md:bg-transparent border border-white/25 md:border-none backdrop-blur-md md:backdrop-blur-none p-5 md:p-0"
                 >
-                  {/* SVG Notched Card Background */}
-                  <div className="absolute inset-0 pointer-events-none">
+                  {/* SVG Notched Card Background (Desktop >= md) */}
+                  <div className="hidden md:block absolute inset-0 pointer-events-none">
                     <img
                       src={assets.reviewCardSvg}
                       alt=""
@@ -3001,9 +3177,9 @@ export default function App() {
                   </div>
 
                   {/* Reviewer Info & Text */}
-                  <div className="relative z-10 px-[48px] pt-[101px]">
-                    <div className="flex items-center gap-[19px]">
-                      <div className="w-[71px] h-[71px] rounded-[52px] overflow-hidden shrink-0">
+                  <div className="relative z-10 md:px-[48px] md:pt-[101px]">
+                    <div className="flex items-center gap-3.5 md:gap-[19px]">
+                      <div className="w-12 h-12 md:w-[71px] md:h-[71px] rounded-[52px] overflow-hidden shrink-0">
                         <img
                           src={review.avatar}
                           alt={review.name}
@@ -3011,10 +3187,10 @@ export default function App() {
                         />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-[24px] text-white leading-normal">
+                        <h3 className="font-semibold text-[18px] md:text-[24px] text-white leading-normal">
                           {review.name}
                         </h3>
-                        <div className="w-[98px] h-[15px] mt-1">
+                        <div className="w-[82px] md:w-[98px] h-[13px] md:h-[15px] mt-1">
                           <img
                             src={assets.starsSvg}
                             alt="4.5 bintang"
@@ -3024,7 +3200,7 @@ export default function App() {
                       </div>
                     </div>
 
-                    <p className="font-normal text-[21px] text-white/75 mt-[41px] max-w-[416px] leading-normal">
+                    <p className="font-normal text-[15px] md:text-[21px] text-white/75 mt-4 md:mt-[41px] max-w-[416px] leading-relaxed md:leading-normal">
                       {review.comment}
                     </p>
                   </div>
@@ -3038,21 +3214,21 @@ export default function App() {
           {/* ========================================================= */}
           <section
             id="best-o2"
-            className="relative z-20 px-6 sm:px-10 lg:px-[77px] pt-28 lg:pt-[214px] pb-20"
+            className="relative z-20 px-4 sm:px-10 lg:px-[77px] pt-20 sm:pt-28 lg:pt-[214px] pb-12 sm:pb-20"
           >
             {/* Heading */}
-            <div className="flex justify-center mb-20 lg:mb-[214px]">
+            <div className="flex justify-center mb-10 sm:mb-20 lg:mb-[214px]">
               <div
-                className="relative inline-flex items-center justify-center px-9 py-2"
+                className="relative inline-flex items-center justify-center px-6 sm:px-9 py-2"
                 data-node-id="22:190"
               >
                 <img
                   src={assets.sectionBracketLeft}
                   alt=""
-                  className="absolute -left-2 -bottom-2 w-[68.5px] h-[69px] pointer-events-none select-none"
+                  className="absolute -left-1 sm:-left-2 -bottom-1 sm:-bottom-2 w-8 h-8 sm:w-[68.5px] sm:h-[69px] pointer-events-none select-none"
                 />
                 <h2
-                  className="font-semibold text-[36px] sm:text-[48px] lg:text-[55px] text-white heading-shadow text-center leading-normal"
+                  className="font-semibold text-[26px] sm:text-[48px] lg:text-[55px] text-white heading-shadow text-center leading-normal"
                   data-node-id="22:191"
                 >
                   Tanaman O2 Terbaik
@@ -3060,14 +3236,14 @@ export default function App() {
                 <img
                   src={assets.sectionBracketRight}
                   alt=""
-                  className="absolute -right-2 -top-2 w-[68.5px] h-[69px] rotate-180 pointer-events-none select-none"
+                  className="absolute -right-1 sm:-right-2 -top-1 sm:-top-2 w-8 h-8 sm:w-[68.5px] sm:h-[69px] rotate-180 pointer-events-none select-none"
                 />
               </div>
             </div>
 
             {/* Large Rounded O2 Showcase Container */}
             <div
-              className="relative w-full min-h-[755px] rounded-[48px] lg:rounded-[113px] bg-white/5 border-2 border-white/45 px-8 sm:px-14 lg:px-16 py-12 lg:py-0 flex flex-col lg:flex-row items-center justify-between"
+              className="relative w-full lg:min-h-[755px] rounded-[32px] sm:rounded-[48px] lg:rounded-[113px] bg-white/5 border-2 border-white/45 px-5 sm:px-14 lg:px-16 py-8 sm:py-12 lg:py-0 flex flex-col lg:flex-row items-center justify-between gap-6"
               data-node-id="22:194"
             >
               {/* Left Giant O2 Plant Image */}
@@ -3078,7 +3254,7 @@ export default function App() {
                   );
                   if (found) setSelectedProduct(found);
                 }}
-                className="relative lg:-ml-[162px] lg:-mt-[283px] w-[360px] sm:w-[600px] xl:w-[877px] xl:h-[877px] shrink-0 flex items-center justify-center cursor-pointer transition-transform duration-500 hover:scale-105"
+                className="relative lg:-ml-[162px] lg:-mt-[283px] w-[220px] h-[220px] sm:w-[440px] sm:h-[440px] xl:w-[877px] xl:h-[877px] shrink-0 flex items-center justify-center cursor-pointer transition-transform duration-500 hover:scale-105"
                 data-node-id="22:195"
               >
                 <img
@@ -3089,29 +3265,29 @@ export default function App() {
               </div>
 
               {/* Right O2 Details + Controls */}
-              <div className="w-full lg:max-w-[740px] lg:py-16 xl:pr-12">
+              <div className="w-full lg:max-w-[740px] lg:py-16 xl:pr-12 text-center lg:text-left">
                 <h3
-                  className="font-semibold text-[28px] sm:text-[38px] text-white/75 max-w-[653px] leading-normal"
+                  className="font-semibold text-[20px] sm:text-[38px] text-white/85 sm:text-white/75 max-w-[653px] mx-auto lg:mx-0 leading-snug sm:leading-normal"
                   data-node-id="22:196"
                 >
                   {currentO2.title}
                 </h3>
 
                 <p
-                  className="font-semibold text-[20px] sm:text-[28px] text-white/75 mt-8 lg:mt-[47px] max-w-[678px] leading-normal"
+                  className="font-medium sm:font-semibold text-[14px] sm:text-[28px] text-white/75 mt-4 sm:mt-8 lg:mt-[47px] max-w-[678px] mx-auto lg:mx-0 leading-relaxed sm:leading-normal"
                   data-node-id="22:197"
                 >
                   {currentO2.paragraph1}
                 </p>
 
                 <p
-                  className="font-semibold text-[20px] sm:text-[28px] text-white/75 mt-6 lg:mt-[47px] max-w-[678px] leading-normal"
+                  className="font-medium sm:font-semibold text-[14px] sm:text-[28px] text-white/75 mt-3 sm:mt-6 lg:mt-[47px] max-w-[678px] mx-auto lg:mx-0 leading-relaxed sm:leading-normal"
                   data-node-id="22:198"
                 >
                   {currentO2.paragraph2}
                 </p>
 
-                <div className="flex flex-wrap items-center justify-between gap-6 mt-10 lg:mt-[47px] max-w-[678px]">
+                <div className="flex flex-wrap items-center justify-between gap-4 sm:gap-6 mt-6 sm:mt-10 lg:mt-[47px] max-w-[678px] mx-auto lg:mx-0">
                   <button
                     type="button"
                     onClick={() => {
@@ -3120,14 +3296,14 @@ export default function App() {
                       );
                       if (found) setSelectedProduct(found);
                     }}
-                    className="w-[180px] h-[58px] rounded-[13px] border-2 border-white/75 text-[24px] text-white/75 hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
+                    className="w-[130px] sm:w-[180px] h-[44px] sm:h-[58px] rounded-[13px] border-2 border-white/75 text-[16px] sm:text-[24px] text-white/80 sm:text-white/75 hover:bg-white hover:text-[#171f12] transition-all duration-300 flex items-center justify-center cursor-pointer"
                     data-node-id="22:199"
                   >
                     Jelajahi
                   </button>
 
                   {/* Prev / 01/04 / Next Controls */}
-                  <div className="flex items-center gap-7">
+                  <div className="flex items-center gap-4 sm:gap-7">
                     <button
                       type="button"
                       onClick={() =>
@@ -3144,7 +3320,7 @@ export default function App() {
                       <img
                         src={assets.rightArrow}
                         alt="Sebelumnya"
-                        className="w-[24px] h-[24px] rotate-180 opacity-45 hover:opacity-80"
+                        className="w-5 h-5 sm:w-[24px] sm:h-[24px] rotate-180 opacity-45 hover:opacity-80"
                       />
                     </button>
 
@@ -3152,8 +3328,12 @@ export default function App() {
                       className="font-semibold text-white/75 select-none"
                       data-node-id="22:204"
                     >
-                      <span className="text-[24px]">0{o2Index + 1}/</span>
-                      <span className="text-[18px]">0{o2Collections.length}</span>
+                      <span className="text-[18px] sm:text-[24px]">
+                        0{o2Index + 1}/
+                      </span>
+                      <span className="text-[14px] sm:text-[18px]">
+                        0{o2Collections.length}
+                      </span>
                     </p>
 
                     <button
@@ -3168,7 +3348,7 @@ export default function App() {
                       <img
                         src={assets.rightArrow}
                         alt="Berikutnya"
-                        className="w-[24px] h-[24px] opacity-75 hover:opacity-100"
+                        className="w-5 h-5 sm:w-[24px] sm:h-[24px] opacity-75 hover:opacity-100"
                       />
                     </button>
                   </div>
@@ -3178,7 +3358,7 @@ export default function App() {
 
             {/* Bottom Slider Dots (data-node-id="22:208") */}
             <div
-              className="flex items-center justify-center gap-3 mt-14 lg:mt-[68px]"
+              className="flex items-center justify-center gap-3 mt-8 sm:mt-14 lg:mt-[68px]"
               data-node-id="22:208"
             >
               {o2Collections.map((item, idx) => (
@@ -3187,10 +3367,11 @@ export default function App() {
                   type="button"
                   onClick={() => setO2Index(idx)}
                   aria-label={`Slide O2 ${idx + 1}`}
-                  className={`h-[9px] rounded-full transition-all cursor-pointer ${o2Index === idx
-                    ? 'w-[38px] bg-white'
-                    : 'w-[9px] bg-white/50 hover:bg-white/80'
-                    }`}
+                  className={`h-[8px] sm:h-[9px] rounded-full transition-all cursor-pointer ${
+                    o2Index === idx
+                      ? 'w-[30px] sm:w-[38px] bg-white'
+                      : 'w-[8px] sm:w-[9px] bg-white/50 hover:bg-white/80'
+                  }`}
                 />
               ))}
             </div>
@@ -3201,24 +3382,24 @@ export default function App() {
           {/* ========================================================= */}
           <footer
             id="footer"
-            className="relative z-20 bg-[#222c1d] w-full min-h-[577px] px-6 sm:px-10 lg:px-[73px] pt-16 lg:pt-[96px] pb-14 mt-16 lg:mt-[120px]"
+            className="relative z-20 bg-[#222c1d] w-full lg:min-h-[577px] px-5 sm:px-10 lg:px-[73px] pt-12 sm:pt-16 lg:pt-[96px] pb-10 sm:pb-14 mt-10 sm:mt-16 lg:mt-[120px]"
             data-node-id="22:209"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
               {/* Column 1: Planto Brand & Socials */}
               <div className="lg:col-span-5">
                 <div
-                  className="flex items-center gap-[11px]"
+                  className="flex items-center gap-2.5 sm:gap-[11px]"
                   data-node-id="22:210"
                 >
                   <img
                     src={assets.logoPlant}
                     alt="Planto"
-                    className="w-[60px] h-[60px] object-contain"
+                    className="w-11 h-11 sm:w-[60px] sm:h-[60px] object-contain"
                     data-node-id="22:211"
                   />
                   <span
-                    className="font-black text-[38px] text-white/75 leading-none mt-2"
+                    className="font-black text-[28px] sm:text-[38px] text-white/75 leading-none mt-1 sm:mt-2"
                     data-node-id="22:212"
                   >
                     Planto.
@@ -3226,7 +3407,7 @@ export default function App() {
                 </div>
 
                 <p
-                  className="font-medium text-[20px] sm:text-[24px] text-white mt-8 lg:mt-[38px] max-w-[589px] leading-normal"
+                  className="font-normal sm:font-medium text-[15px] sm:text-[24px] text-white/85 sm:text-white mt-5 sm:mt-8 lg:mt-[38px] max-w-[589px] leading-relaxed sm:leading-normal"
                   data-node-id="22:213"
                 >
                   Planto adalah platform e-commerce yang berfokus pada penjualan
@@ -3236,7 +3417,7 @@ export default function App() {
                 </p>
 
                 <div
-                  className="flex items-center gap-[45px] mt-12 lg:mt-[120px] font-semibold text-[24px] text-white"
+                  className="flex flex-wrap items-center gap-6 sm:gap-[45px] mt-8 sm:mt-12 lg:mt-[120px] font-semibold text-[16px] sm:text-[24px] text-white"
                   data-node-id="22:217"
                 >
                   <a
@@ -3278,13 +3459,13 @@ export default function App() {
               {/* Column 2: Tautan Cepat */}
               <div className="lg:col-span-3">
                 <h4
-                  className="font-semibold text-[28px] text-white/75"
+                  className="font-semibold text-[20px] sm:text-[28px] text-white/75"
                   data-node-id="22:218"
                 >
                   Tentang Kami
                 </h4>
 
-                <ul className="mt-8 lg:mt-[49px] space-y-[22px] font-medium text-[24px] text-white/75">
+                <ul className="mt-4 sm:mt-8 lg:mt-[49px] space-y-3 sm:space-y-[22px] font-medium text-[16px] sm:text-[24px] text-white/75">
                   <li>
                     <a
                       href="#home"
@@ -3339,7 +3520,7 @@ export default function App() {
               <div className="lg:col-span-4 flex flex-col justify-between">
                 <div>
                   <h4
-                    className="font-semibold text-[28px] text-white/75"
+                    className="font-semibold text-[20px] sm:text-[28px] text-white/75"
                     data-node-id="22:225"
                   >
                     Dapatkan Info Terbaru
@@ -3347,7 +3528,7 @@ export default function App() {
 
                   <form
                     onSubmit={handleSubscribe}
-                    className="mt-8 lg:mt-[44px] relative w-full max-w-[563px] h-[67px] rounded-[10px] border-2 border-white flex items-center overflow-hidden"
+                    className="mt-5 sm:mt-8 lg:mt-[44px] relative w-full max-w-[563px] h-[52px] sm:h-[67px] rounded-[10px] border-2 border-white flex items-center overflow-hidden"
                     data-node-id="22:226"
                   >
                     <input
@@ -3355,19 +3536,19 @@ export default function App() {
                       required
                       value={emailInput}
                       onChange={(e) => setEmailInput(e.target.value)}
-                      className="w-full h-full bg-transparent pl-6 lg:pl-[32px] pr-[180px] font-semibold text-[18px] text-white focus:outline-none"
+                      className="w-full h-full bg-transparent pl-4 sm:pl-6 lg:pl-[32px] pr-[125px] sm:pr-[180px] font-semibold text-[14px] sm:text-[18px] text-white focus:outline-none"
                     />
                     <button
                       type="submit"
                       aria-label="Berlangganan"
-                      className="absolute right-0 top-0 h-full w-[170px] bg-white text-[#171f12] font-bold text-[18px] tracking-wide flex items-center justify-center cursor-pointer hover:bg-[#4ade80] transition-colors"
+                      className="absolute right-0 top-0 h-full w-[115px] sm:w-[170px] bg-white text-[#171f12] font-bold text-[13px] sm:text-[18px] tracking-wide flex items-center justify-center cursor-pointer hover:bg-[#4ade80] transition-colors"
                       data-node-id="22:229"
                     >
                       LANGGANAN
                     </button>
                   </form>
                   {subscribed && (
-                    <p className="text-sm text-[#4ade80] mt-2">
+                    <p className="text-xs sm:text-sm text-[#4ade80] mt-2">
                       ✓ Berhasil berlangganan info perawatan tanaman & promo
                       mingguan!
                     </p>
@@ -3375,7 +3556,7 @@ export default function App() {
                 </div>
 
                 <p
-                  className="font-semibold text-[22px] text-white/75 mt-12 lg:mt-[215px]"
+                  className="font-semibold text-[14px] sm:text-[22px] text-white/75 mt-8 sm:mt-12 lg:mt-[215px]"
                   data-node-id="22:232"
                 >
                   Planto © Hak cipta dilindungi
@@ -3523,7 +3704,7 @@ export default function App() {
           onClick={() => setSelectedProduct(null)}
         >
           <div
-            className="relative w-full max-w-3xl rounded-[38px] bg-[#1e2918] border-2 border-white/35 p-6 sm:p-10 shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-[28px] sm:rounded-[38px] bg-[#1e2918] border-2 border-white/35 p-5 sm:p-10 shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <button
