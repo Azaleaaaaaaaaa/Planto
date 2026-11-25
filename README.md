@@ -164,12 +164,6 @@ planto-ecommerce/
 
 ---
 
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
----
-
 <p align="center">
-  Dibuat dengan 💚 dan dedikasi oleh <b>Kelompok Planto</b>.
+  Dibuat dengan 💚 dan dedikasi oleh <b>Pecinta Lingkungan</b>.
 </p>
