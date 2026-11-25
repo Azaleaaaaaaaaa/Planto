@@ -6,7 +6,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-React-F56565?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 
 > Proyek Pengembangan Aplikasi Web E-Commerce Penjualan Tanaman Hias dan Pembersih Udara Ruangan Berbasis React, TypeScript, dan Tailwind CSS v4.
 
