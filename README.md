@@ -142,8 +142,8 @@ planto-ecommerce/
 
 1. **Clone repositori proyek:**
    ```bash
-   git clone https://github.com/username-anda/planto-ecommerce.git
-   cd planto-ecommerce
+   git clone https://github.com/Azaleaaaaaaaaa/Planto.git
+   cd Planto
    ```
 
 2. **Install seluruh dependensi:**
