@@ -1151,9 +1151,9 @@ export default function App() {
           </footer>
         </div>
       ) : isCheckoutOpen ? (
-        <div className="min-h-screen bg-[#171f12] text-white flex flex-col justify-between">
-          {/* Checkout Page Navbar */}
-          <header className="sticky top-0 z-30 bg-[#171f12]/90 backdrop-blur-xl border-b border-white/15">
+        <div className="min-h-screen print:min-h-0 bg-[#171f12] text-white flex flex-col justify-between print:block">
+          {/* Checkout Page Navbar (disembunyikan saat cetak PDF) */}
+          <header className="sticky top-0 z-30 bg-[#171f12]/90 backdrop-blur-xl border-b border-white/15 print:hidden">
             <div className="max-w-7xl mx-auto px-6 sm:px-10 py-5 flex items-center justify-between gap-4">
               <div className="flex items-center gap-4">
                 <button
@@ -1218,95 +1218,105 @@ export default function App() {
           </header>
 
           {/* Checkout Page Main Content */}
-          <main className="max-w-7xl w-full mx-auto px-4 sm:px-10 py-8 sm:py-12 flex-1">
-            <div className="mb-8">
-              <h1 className="text-3xl sm:text-4xl font-bold text-white">
-                {checkoutSuccess
-                  ? 'Bukti Pemesanan Resmi Planto.'
-                  : 'Halaman Checkout & Pengiriman'}
-              </h1>
-              <p className="text-sm text-white/65 mt-1">
-                {checkoutSuccess
-                  ? 'Terima kasih telah berbelanja di Planto. Simpan invoice ini sebagai bukti garansi tanaman hidup.'
-                  : 'Lengkapi alamat pengiriman dan pilih metode pembayaran yang paling nyaman untuk Anda.'}
-              </p>
+          <main className="max-w-7xl w-full mx-auto px-4 sm:px-10 py-8 sm:py-12 print:px-0 print:py-2 flex-1">
+            <div className="mb-8 print:mb-3 print:flex print:items-center print:justify-between">
+              <div className="hidden print:flex items-center gap-2 mb-1">
+                <img
+                  src={assets.logoPlant}
+                  alt="Planto"
+                  className="w-7 h-7 object-contain"
+                />
+                <span className="font-black text-xl text-white">Planto.</span>
+              </div>
+              <div>
+                <h1 className="text-3xl sm:text-4xl print:text-xl font-bold text-white">
+                  {checkoutSuccess
+                    ? 'Bukti Pemesanan Resmi Planto.'
+                    : 'Halaman Checkout & Pengiriman'}
+                </h1>
+                <p className="text-sm print:text-xs text-white/65 mt-1 print:mt-0.5">
+                  {checkoutSuccess
+                    ? 'Terima kasih telah berbelanja di Planto. Simpan invoice ini sebagai bukti garansi tanaman hidup.'
+                    : 'Lengkapi alamat pengiriman dan pilih metode pembayaran yang paling nyaman untuk Anda.'}
+                </p>
+              </div>
             </div>
 
             {checkoutSuccess && lastOrderInvoice ? (
               /* =================================================== */
               /* INVOICE / ORDER CONFIRMATION PAGE                   */
               /* =================================================== */
-              <div className="rounded-[32px] bg-[#1e2918] border border-white/20 p-6 sm:p-10 space-y-8 shadow-2xl">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 rounded-3xl bg-[#4ade80]/10 border border-[#4ade80]/30">
-                  <div className="flex items-center gap-4">
-                    <CheckCircle2 className="w-14 h-14 text-[#4ade80] shrink-0" />
+              <div className="invoice-print-container rounded-[32px] print:rounded-2xl bg-[#1e2918] border border-white/20 p-6 sm:p-10 print:p-5 space-y-8 print:space-y-4 shadow-2xl print:shadow-none">
+                <div className="flex flex-col sm:flex-row print:flex-row items-start sm:items-center print:items-center justify-between gap-4 print:gap-3 p-6 print:p-4 rounded-3xl print:rounded-2xl bg-[#4ade80]/10 border border-[#4ade80]/30">
+                  <div className="flex items-center gap-4 print:gap-3">
+                    <CheckCircle2 className="w-14 h-14 print:w-10 print:h-10 text-[#4ade80] shrink-0" />
                     <div>
-                      <span className="inline-block px-3 py-0.5 rounded-full text-xs font-bold bg-[#4ade80] text-[#171f12] mb-1">
+                      <span className="inline-block px-3 py-0.5 rounded-full text-xs print:text-[10px] font-bold bg-[#4ade80] text-[#171f12] mb-1">
                         PEMBAYARAN TERVERIFIKASI
                       </span>
-                      <h4 className="text-2xl font-bold text-white">
+                      <h4 className="text-2xl print:text-lg font-bold text-white">
                         Terima kasih, {lastOrderInvoice.customerName}!
                       </h4>
-                      <p className="text-sm text-white/75">
+                      <p className="text-sm print:text-xs text-white/75">
                         Pesanan tanaman Anda sedang dikemas dengan hydrogel
                         pelembap & pelindung khusus.
                       </p>
                     </div>
                   </div>
-                  <div className="text-left sm:text-right bg-black/25 px-5 py-3.5 rounded-2xl border border-white/10">
-                    <p className="text-xs text-white/60">Nomor Invoice</p>
-                    <p className="text-lg font-mono font-bold text-[#4ade80]">
+                  <div className="text-left sm:text-right print:text-right bg-black/25 px-5 py-3.5 print:px-3.5 print:py-2 rounded-2xl border border-white/10 shrink-0">
+                    <p className="text-xs print:text-[10px] text-white/60">Nomor Invoice</p>
+                    <p className="text-lg print:text-sm font-mono font-bold text-[#4ade80]">
                       #{lastOrderInvoice.orderId}
                     </p>
-                    <p className="text-[11px] text-white/50">
+                    <p className="text-[11px] print:text-[10px] text-white/50">
                       {lastOrderInvoice.date}
                     </p>
                   </div>
                 </div>
 
                 {/* Shipping & Payment Info Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                  <div className="p-5 rounded-2xl bg-white/5 border border-white/15 space-y-1.5">
-                    <div className="flex items-center gap-2 text-[#4ade80] text-xs font-bold uppercase tracking-wider">
-                      <MapPin className="w-4 h-4" />
+                <div className="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-5 print:gap-3">
+                  <div className="p-5 print:p-3 rounded-2xl bg-white/5 border border-white/15 space-y-1.5 print:space-y-1">
+                    <div className="flex items-center gap-2 text-[#4ade80] text-xs print:text-[10px] font-bold uppercase tracking-wider">
+                      <MapPin className="w-4 h-4 print:w-3.5 print:h-3.5" />
                       <span>Tujuan Pengiriman</span>
                     </div>
-                    <p className="font-semibold text-white">
+                    <p className="font-semibold text-white print:text-xs">
                       {lastOrderInvoice.customerName}
                     </p>
-                    <p className="text-xs text-white/70">
+                    <p className="text-xs print:text-[11px] text-white/70">
                       {lastOrderInvoice.phone}
                     </p>
-                    <p className="text-xs text-white/70 leading-relaxed">
+                    <p className="text-xs print:text-[11px] text-white/70 leading-relaxed print:leading-snug">
                       {lastOrderInvoice.address}
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-white/5 border border-white/15 space-y-1.5">
-                    <div className="flex items-center gap-2 text-[#4ade80] text-xs font-bold uppercase tracking-wider">
-                      <Truck className="w-4 h-4" />
+                  <div className="p-5 print:p-3 rounded-2xl bg-white/5 border border-white/15 space-y-1.5 print:space-y-1">
+                    <div className="flex items-center gap-2 text-[#4ade80] text-xs print:text-[10px] font-bold uppercase tracking-wider">
+                      <Truck className="w-4 h-4 print:w-3.5 print:h-3.5" />
                       <span>Ekspedisi & Estimasi</span>
                     </div>
-                    <p className="font-semibold text-white">
+                    <p className="font-semibold text-white print:text-xs">
                       {lastOrderInvoice.courier}
                     </p>
-                    <p className="text-xs text-[#4ade80]">
+                    <p className="text-xs print:text-[11px] text-[#4ade80]">
                       {lastOrderInvoice.etd}
                     </p>
-                    <p className="text-xs text-white/60">
+                    <p className="text-xs print:text-[11px] text-white/60">
                       Status: Menunggu Penjemputan Kurir
                     </p>
                   </div>
 
-                  <div className="p-5 rounded-2xl bg-white/5 border border-white/15 space-y-1.5">
-                    <div className="flex items-center gap-2 text-[#4ade80] text-xs font-bold uppercase tracking-wider">
-                      <Wallet className="w-4 h-4" />
+                  <div className="p-5 print:p-3 rounded-2xl bg-white/5 border border-white/15 space-y-1.5 print:space-y-1">
+                    <div className="flex items-center gap-2 text-[#4ade80] text-xs print:text-[10px] font-bold uppercase tracking-wider">
+                      <Wallet className="w-4 h-4 print:w-3.5 print:h-3.5" />
                       <span>Metode Pembayaran</span>
                     </div>
-                    <p className="font-semibold text-white">
+                    <p className="font-semibold text-white print:text-xs">
                       {lastOrderInvoice.paymentLabel}
                     </p>
-                    <p className="text-xs text-white/70">
+                    <p className="text-xs print:text-[11px] text-white/70">
                       Total Dibayar:{' '}
                       <span className="text-[#4ade80] font-bold">
                         {formatRupiah(lastOrderInvoice.grandTotal)}
@@ -1316,8 +1326,8 @@ export default function App() {
                 </div>
 
                 {/* Ordered Items List */}
-                <div className="rounded-2xl bg-white/5 border border-white/15 p-6 space-y-4">
-                  <h5 className="font-semibold text-white flex items-center gap-2">
+                <div className="rounded-2xl bg-white/5 border border-white/15 p-6 print:p-4 space-y-4 print:space-y-2.5">
+                  <h5 className="font-semibold text-white print:text-sm flex items-center gap-2">
                     <FileText className="w-4 h-4 text-[#4ade80]" />
                     <span>Rincian Tanaman yang Dipesan</span>
                   </h5>
@@ -1325,24 +1335,24 @@ export default function App() {
                     {lastOrderInvoice.items.map(({ product, quantity }) => (
                       <div
                         key={product.id}
-                        className="py-3.5 flex items-center justify-between gap-4"
+                        className="py-3.5 print:py-2 flex items-center justify-between gap-4"
                       >
-                        <div className="flex items-center gap-3.5">
+                        <div className="flex items-center gap-3.5 print:gap-2.5">
                           <img
                             src={product.image}
                             alt={product.name}
-                            className="w-14 h-14 object-contain rounded-xl bg-black/25 p-1"
+                            className="w-14 h-14 print:w-10 print:h-10 object-contain rounded-xl bg-black/25 p-1"
                           />
                           <div>
-                            <p className="font-semibold text-white text-base">
+                            <p className="font-semibold text-white text-base print:text-xs">
                               {product.name}
                             </p>
-                            <p className="text-xs text-white/60">
+                            <p className="text-xs print:text-[11px] text-white/60">
                               {quantity} x {product.priceFormatted}
                             </p>
                           </div>
                         </div>
-                        <p className="font-semibold text-white text-base">
+                        <p className="font-semibold text-white text-base print:text-xs">
                           {formatRupiah(product.price * quantity)}
                         </p>
                       </div>
@@ -1350,7 +1360,7 @@ export default function App() {
                   </div>
 
                   {/* Cost Breakdown */}
-                  <div className="border-t border-white/15 pt-4 space-y-2 text-sm">
+                  <div className="border-t border-white/15 pt-4 print:pt-2.5 space-y-2 print:space-y-1 text-sm print:text-xs">
                     <div className="flex justify-between text-white/70">
                       <span>Subtotal Produk</span>
                       <span>{formatRupiah(lastOrderInvoice.subtotal)}</span>
@@ -1369,7 +1379,7 @@ export default function App() {
                         <span>- {formatRupiah(lastOrderInvoice.discount)}</span>
                       </div>
                     )}
-                    <div className="flex justify-between text-xl font-bold text-white pt-3 border-t border-white/15">
+                    <div className="flex justify-between text-xl print:text-base font-bold text-white pt-3 print:pt-2 border-t border-white/15">
                       <span>Total Pembayaran</span>
                       <span className="text-[#4ade80]">
                         {formatRupiah(lastOrderInvoice.grandTotal)}
@@ -1378,8 +1388,8 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Actions */}
-                <div className="flex flex-wrap items-center justify-end gap-4">
+                {/* Actions (disembunyikan saat cetak PDF) */}
+                <div className="flex flex-wrap items-center justify-end gap-4 print:hidden">
                   <button
                     type="button"
                     onClick={() => window.print()}
@@ -2157,8 +2167,8 @@ export default function App() {
             )}
           </main>
 
-          {/* Checkout Page Compact Footer */}
-          <footer className="border-t border-white/10 bg-[#222c1d] py-6 px-6 sm:px-10 text-center sm:flex items-center justify-between text-xs text-white/60">
+          {/* Checkout Page Compact Footer (disembunyikan saat cetak PDF) */}
+          <footer className="border-t border-white/10 bg-[#222c1d] py-6 px-6 sm:px-10 text-center sm:flex items-center justify-between text-xs text-white/60 print:hidden">
             <div className="flex items-center justify-center gap-2">
               <img
                 src={assets.logoPlant}
