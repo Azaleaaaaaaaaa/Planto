@@ -3011,39 +3011,39 @@ export default function App() {
               </div>
             ) : (
               <>
-                {/* MOBILE 2-COLUMN COMPACT E-COMMERCE GRID (< md) */}
-                <div className="grid grid-cols-2 gap-3.5 sm:gap-5 mt-6 md:hidden">
+                {/* MOBILE & TABLET 2-COLUMN COMPACT E-COMMERCE GRID (< lg) */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5 mt-6 lg:hidden">
                   {topSellingProducts.map((plant) => (
                     <div
                       key={plant.id}
-                      className="rounded-[24px] backdrop-blur-md bg-white/5 border border-white/25 p-3.5 flex flex-col justify-between shadow-xl"
+                      className="rounded-[24px] backdrop-blur-md bg-white/5 border border-white/25 p-3 sm:p-4 flex flex-col justify-between shadow-xl overflow-hidden"
                     >
                       <div>
                         <div
                           onClick={() => setSelectedProduct(plant)}
-                          className="w-full aspect-square flex items-center justify-center cursor-pointer p-1"
+                          className="w-full h-[135px] sm:h-[180px] rounded-2xl bg-black/15 overflow-hidden flex items-center justify-center cursor-pointer p-2"
                         >
                           <img
                             src={plant.image}
                             alt={plant.name}
-                            className="w-full h-full object-contain plant-drop-shadow"
+                            className="max-h-full max-w-full w-auto h-auto object-contain mx-auto plant-drop-shadow"
                           />
                         </div>
 
                         <h3
                           onClick={() => setSelectedProduct(plant)}
-                          className="font-semibold text-[15px] text-white mt-2 leading-snug line-clamp-1 cursor-pointer"
+                          className="font-semibold text-[14px] sm:text-[17px] text-white mt-2.5 leading-snug line-clamp-1 cursor-pointer"
                         >
                           {plant.name}
                         </h3>
 
-                        <p className="text-[11px] text-white/70 mt-1 line-clamp-2 leading-relaxed">
+                        <p className="text-[11px] sm:text-xs text-white/70 mt-1 line-clamp-2 leading-relaxed">
                           {plant.description}
                         </p>
                       </div>
 
-                      <div className="flex items-center justify-between gap-1.5 mt-3 pt-2 border-t border-white/10">
-                        <span className="font-bold text-[13px] text-[#4ade80] leading-none">
+                      <div className="flex items-center justify-between gap-1.5 mt-3 pt-2.5 border-t border-white/10">
+                        <span className="font-bold text-[13px] sm:text-[15px] text-[#4ade80] leading-none">
                           {plant.priceFormatted}
                         </span>
 
@@ -3051,7 +3051,7 @@ export default function App() {
                           type="button"
                           onClick={() => addToCart(plant, false)}
                           aria-label={`Tambah ${plant.name} ke keranjang`}
-                          className="w-9 h-9 rounded-xl border border-white/60 flex items-center justify-center hover:bg-white/20 active:scale-95 transition-all cursor-pointer shrink-0"
+                          className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl border border-white/60 flex items-center justify-center hover:bg-white/20 active:scale-95 transition-all cursor-pointer shrink-0"
                         >
                           <img
                             src={assets.bagIcon}
@@ -3064,8 +3064,8 @@ export default function App() {
                   ))}
                 </div>
 
-                {/* DESKTOP / TABLET GRID (>= md): Exact Original Figma Layout */}
-                <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-x-[19px] gap-y-[22px] justify-items-center mt-8">
+                {/* DESKTOP GRID (>= lg): Exact Original Figma Layout */}
+                <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-x-[19px] gap-y-[22px] justify-items-center mt-8">
                   {topSellingProducts.map((plant) => (
                     <div
                       key={plant.id}
