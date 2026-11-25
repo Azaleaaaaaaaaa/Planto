@@ -44,14 +44,16 @@ Proyek aplikasi web **Planto.** ini dikembangkan bersama oleh:
 
 <div align="center">
   <h3>✨ Hero Section — "Bernapas Alami"</h3>
-  <img src="https://drive.google.com/file/d/1iMVuPk4o3Nq_SCwVyP05j9H1vPx7x6-U/view?usp=sharing" alt="Hero Section Planto" width="100%" />
+  <img src=<img width="1917" height="911" alt="Screenshot 2026-11-25 213618" src="https://github.com/user-attachments/assets/a62f0210-1fbe-46b6-893b-fc671c11c29a" />
+ alt="Hero Section Planto" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
   <h3>🌿 Koleksi Tanaman Penghasil O2 (Interactive Slider)</h3>
-  <img src="https://drive.google.com/file/d/1zuZ7A8_EXOnKbTEIGFEtfdd6LP_931tZ/view?usp=sharing" alt="Slider Koleksi O2" width="100%" />
+  <img src=<img width="1916" height="904" alt="Screenshot 2026-11-25 214111" src="https://github.com/user-attachments/assets/54bb6dbd-584b-4751-a806-b27dfc62712e" />
+ alt="Slider Koleksi O2" width="100%" />
 </div>
 
 <br/>
@@ -60,15 +62,18 @@ Proyek aplikasi web **Planto.** ini dikembangkan bersama oleh:
 
 | Spotlight Tanaman Populer | Penawaran Sukulen Spesial |
 | :---: | :---: |
-| ![Tanaman Populer](https://drive.google.com/file/d/1VDsiq3ZZnmSHDkXWXOOeVuRVuZbKBXpS/view?usp=sharing) | ![Sukulen Spesial](screenshots/03-produk-sukulen.jpg) |
+| ![Tanaman Populer](<img width="1915" height="901" alt="Screenshot 2026-11-25 214137" src="https://github.com/user-attachments/assets/8976e52e-644d-4ec1-83b7-bc62dbcf8ef3" />
+) | ![Sukulen Spesial](screenshots/03-produk-sukulen.jpg) |
 
 | Filter Kategori Tanaman | Katalog Produk & Harga |
 | :---: | :---: |
-| ![Filter Kategori](https://drive.google.com/file/d/1mLmdQFj1tLmw9FxHid3PGhl9wTTJnvno/view?usp=sharing) | ![Katalog Produk](screenshots/06-katalog-produk.jpg) |
+| ![Filter Kategori](<img width="1913" height="331" alt="Screenshot 2026-11-25 214204" src="https://github.com/user-attachments/assets/9e877c59-92e6-491c-952b-59b068d9d8dd" />
+) | ![Katalog Produk](screenshots/06-katalog-produk.jpg) |
 
 | Ulasan & Testimoni Pelanggan | Footer & Langganan Newsletter |
 | :---: | :---: |
-| ![Review Pelanggan](https://drive.google.com/file/d/1yeTa2ozBcGjeC70DOFshhxxSO40hHUKr/view?usp=sharing) | ![Footer Newsletter](screenshots/08-footer-newsletter.png) |
+| ![Review Pelanggan](<img width="1914" height="898" alt="Screenshot 2026-11-25 214224" src="https://github.com/user-attachments/assets/706cbcdb-91b9-4284-be02-5db86e0cd4c7" />
+) | ![Footer Newsletter](screenshots/08-footer-newsletter.png) |
 
 ---
 
